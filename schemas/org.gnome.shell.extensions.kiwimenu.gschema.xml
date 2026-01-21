@@ -31,6 +31,56 @@
       <summary>App Store command</summary>
       <description>Command executed when launching the App Store menu item</description>
     </key>
+    <key type="b" name="hide-about">
+      <default>false</default>
+      <summary>Hide About This PC</summary>
+      <description>Hide the About This PC menu item</description>
+    </key>
+    <key type="b" name="hide-settings">
+      <default>false</default>
+      <summary>Hide System Settings</summary>
+      <description>Hide the System Settings menu item</description>
+    </key>
+    <key type="b" name="hide-app-store">
+      <default>false</default>
+      <summary>Hide App Store</summary>
+      <description>Hide the App Store menu item</description>
+    </key>
+    <key type="b" name="hide-recent-items">
+      <default>false</default>
+      <summary>Hide Recent Items</summary>
+      <description>Hide the Recent Items submenu</description>
+    </key>
+    <key type="b" name="hide-force-quit">
+      <default>false</default>
+      <summary>Hide Force Quit</summary>
+      <description>Hide the Force Quit menu item</description>
+    </key>
+    <key type="b" name="hide-sleep">
+      <default>false</default>
+      <summary>Hide Sleep</summary>
+      <description>Hide the Sleep menu item</description>
+    </key>
+    <key type="b" name="hide-restart">
+      <default>false</default>
+      <summary>Hide Restart</summary>
+      <description>Hide the Restart menu item</description>
+    </key>
+    <key type="b" name="hide-shutdown">
+      <default>false</default>
+      <summary>Hide Shut Down</summary>
+      <description>Hide the Shut Down menu item</description>
+    </key>
+    <key type="b" name="hide-lock-screen">
+      <default>false</default>
+      <summary>Hide Lock Screen</summary>
+      <description>Hide the Lock Screen menu item</description>
+    </key>
+    <key type="b" name="hide-logout">
+      <default>false</default>
+      <summary>Hide Log Out</summary>
+      <description>Hide the Log Out menu item</description>
+    </key>
     <key type="b" name="custom-menu-enabled">
       <default>false</default>
       <summary>Enable custom menu item</summary>

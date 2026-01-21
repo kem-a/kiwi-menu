@@ -23,7 +23,8 @@ Kiwi Menu replaces the Activities button with a compact, macOS-inspired launcher
 - **Adaptive logout label**: Personalizes the log out entry with your full name when available.
 - **Curated session controls**: Sleep, restart, shut down, lock, and log out entries mirror the macOS Apple menu workflow.
 - **Hide Activities**: Hide activities button in top panel.
-- **Hide Power buttons**: Hide Lock screen and Power buttons in Quick Settings
+- **Hide Quick Settings buttons**: Hide Lock screen, Power, and Settings buttons in GNOME Quick Settings.
+- **Hide Menu Items**: Customize which items appear in the Kiwi Menu (About, Settings, App Store, Recent Items, Force Quit, Sleep, Restart, Shut Down, Lock Screen, Log Out).
 
 - **Multilingual support**: Fully translatable interface
 

@@ -94,6 +94,27 @@ export const KiwiMenu = GObject.registerClass(
         )
       );
 
+      // Listen for menu item visibility changes
+      const hideSettingKeys = [
+        'hide-about',
+        'hide-settings',
+        'hide-app-store',
+        'hide-recent-items',
+        'hide-force-quit',
+        'hide-sleep',
+        'hide-restart',
+        'hide-shutdown',
+        'hide-lock-screen',
+        'hide-logout',
+      ];
+      hideSettingKeys.forEach((key) => {
+        this._settingsSignalIds.push(
+          this._settings.connect(`changed::${key}`, () =>
+            this._renderPopupMenu()
+          )
+        );
+      });
+
       this._menuOpenSignalId = this.menu.connect(
         'open-state-changed',
         (_, isOpen) => {
@@ -242,6 +263,18 @@ export const KiwiMenu = GObject.registerClass(
 
         if (outputItem.requiresMultipleUsers && !hasMultipleUsers) {
           continue;
+        }
+
+        // Check if item should be hidden based on hideSettingKey
+        if (outputItem.hideSettingKey) {
+          try {
+            const isHidden = this._settings.get_boolean(outputItem.hideSettingKey);
+            if (isHidden) {
+              continue;
+            }
+          } catch (error) {
+            // If setting doesn't exist, show the item
+          }
         }
 
         items.push(outputItem);

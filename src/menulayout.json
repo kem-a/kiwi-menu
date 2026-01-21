@@ -2,7 +2,8 @@
   {
     "type": "menu",
     "title": "About This PC",
-    "cmds": ["gnome-control-center", "about"]
+    "cmds": ["gnome-control-center", "about"],
+    "hideSettingKey": "hide-about"
   },
   {
     "type": "separator"
@@ -10,20 +11,23 @@
   {
     "type": "menu",
     "title": "System Settings...",
-    "cmds": ["gnome-control-center"]
+    "cmds": ["gnome-control-center"],
+    "hideSettingKey": "hide-settings"
   },
   {
     "type": "menu",
     "title": "App Store...",
     "cmds": ["gnome-software"],
-    "commandSettingKey": "app-store-command"
+    "commandSettingKey": "app-store-command",
+    "hideSettingKey": "hide-app-store"
   },
   {
     "type": "separator"
   },
   {
     "type": "recent-items",
-    "title": "Recent Items"
+    "title": "Recent Items",
+    "hideSettingKey": "hide-recent-items"
   },
   {
     "type": "separator"
@@ -31,7 +35,8 @@
   {
     "type": "menu",
     "title": "Force Quit",
-    "cmds": ["xkill"]
+    "cmds": ["xkill"],
+    "hideSettingKey": "hide-force-quit"
   },
   {
     "type": "separator"
@@ -39,17 +44,20 @@
   {
     "type": "menu",
     "title": "Sleep",
-    "cmds": ["systemctl", "suspend"]
+    "cmds": ["systemctl", "suspend"],
+    "hideSettingKey": "hide-sleep"
   },
   {
     "type": "menu",
     "title": "Restart...",
-    "cmds": ["gnome-session-quit", "--reboot"]
+    "cmds": ["gnome-session-quit", "--reboot"],
+    "hideSettingKey": "hide-restart"
   },
   {
     "type": "menu",
     "title": "Shut Down...",
-    "cmds": ["gnome-session-quit", "--power-off"]
+    "cmds": ["gnome-session-quit", "--power-off"],
+    "hideSettingKey": "hide-shutdown"
   },
   {
     "type": "separator"
@@ -57,11 +65,13 @@
   {
     "type": "menu",
     "title": "Lock Screen",
-    "cmds": ["loginctl", "lock-session"]
+    "cmds": ["loginctl", "lock-session"],
+    "hideSettingKey": "hide-lock-screen"
   },
   {
     "type": "menu",
     "title": "Log Out...",
-    "cmds": ["gnome-session-quit", "--logout"]
+    "cmds": ["gnome-session-quit", "--logout"],
+    "hideSettingKey": "hide-logout"
   }
 ]

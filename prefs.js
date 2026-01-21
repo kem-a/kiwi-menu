@@ -355,8 +355,8 @@ const OptionsPage = GObject.registerClass(
       this.add(behaviorGroup);
 
       const quickSettingsGroup = new Adw.PreferencesGroup({
-        title: this._('Quick Settings'),
-        description: this._('Choose which default quick action buttons stay visible.'),
+        title: this._('GNOME Quick Settings'),
+        description: this._('Choose which GNOME quick action buttons stay visible.'),
       });
 
       const quickActionToggles = [
@@ -398,6 +398,87 @@ const OptionsPage = GObject.registerClass(
       });
 
       this.add(quickSettingsGroup);
+
+      // Menu Items visibility group
+      const menuItemsGroup = new Adw.PreferencesGroup({
+        title: this._('Menu Items'),
+        description: this._('Choose which menu items appear in the Kiwi Menu.'),
+      });
+
+      const menuItemToggles = [
+        {
+          key: 'hide-about',
+          title: this._('Hide About This PC'),
+          subtitle: this._('Remove the About This PC menu item.'),
+        },
+        {
+          key: 'hide-settings',
+          title: this._('Hide System Settings'),
+          subtitle: this._('Remove the System Settings menu item.'),
+        },
+        {
+          key: 'hide-app-store',
+          title: this._('Hide App Store'),
+          subtitle: this._('Remove the App Store menu item.'),
+        },
+        {
+          key: 'hide-recent-items',
+          title: this._('Hide Recent Items'),
+          subtitle: this._('Remove the Recent Items submenu.'),
+        },
+        {
+          key: 'hide-force-quit',
+          title: this._('Hide Force Quit'),
+          subtitle: this._('Remove the Force Quit menu item.'),
+        },
+        {
+          key: 'hide-sleep',
+          title: this._('Hide Sleep'),
+          subtitle: this._('Remove the Sleep menu item.'),
+        },
+        {
+          key: 'hide-restart',
+          title: this._('Hide Restart'),
+          subtitle: this._('Remove the Restart menu item.'),
+        },
+        {
+          key: 'hide-shutdown',
+          title: this._('Hide Shut Down'),
+          subtitle: this._('Remove the Shut Down menu item.'),
+        },
+        {
+          key: 'hide-lock-screen',
+          title: this._('Hide Lock Screen'),
+          subtitle: this._('Remove the Lock Screen menu item.'),
+        },
+        {
+          key: 'hide-logout',
+          title: this._('Hide Log Out'),
+          subtitle: this._('Remove the Log Out menu item.'),
+        },
+      ];
+
+      menuItemToggles.forEach(({ key, title, subtitle }) => {
+        const toggle = new Gtk.Switch({
+          valign: Gtk.Align.CENTER,
+          active: this._settings.get_boolean(key),
+        });
+
+        const row = new Adw.ActionRow({
+          title,
+          subtitle,
+          activatable_widget: toggle,
+        });
+        row.add_suffix(toggle);
+
+        menuItemsGroup.add(row);
+
+        toggle.connect('notify::active', (widget) => {
+          this._settings.set_boolean(key, widget.get_active());
+        });
+      });
+
+      this.add(menuItemsGroup);
 
       iconSelectorRow.connect('notify::selected', (widget) => {
         this._settings.set_int('icon', widget.selected);
