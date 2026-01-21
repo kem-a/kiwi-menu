@@ -78,21 +78,31 @@ export const KiwiMenu = GObject.registerClass(
           this._renderPopupMenu()
         )
       );
+      // Listen for changes to custom menu count
       this._settingsSignalIds.push(
-        this._settings.connect('changed::custom-menu-enabled', () =>
+        this._settings.connect('changed::custom-menu-count', () =>
           this._renderPopupMenu()
         )
       );
-      this._settingsSignalIds.push(
-        this._settings.connect('changed::custom-menu-label', () =>
-          this._renderPopupMenu()
-        )
-      );
-      this._settingsSignalIds.push(
-        this._settings.connect('changed::custom-menu-command', () =>
-          this._renderPopupMenu()
-        )
-      );
+
+      // Listen for changes to all 10 custom menu items
+      for (let i = 1; i <= 10; i++) {
+        this._settingsSignalIds.push(
+          this._settings.connect(`changed::custom-menu-${i}-enabled`, () =>
+            this._renderPopupMenu()
+          )
+        );
+        this._settingsSignalIds.push(
+          this._settings.connect(`changed::custom-menu-${i}-label`, () =>
+            this._renderPopupMenu()
+          )
+        );
+        this._settingsSignalIds.push(
+          this._settings.connect(`changed::custom-menu-${i}-command`, () =>
+            this._renderPopupMenu()
+          )
+        );
+      }
 
       this._menuOpenSignalId = this.menu.connect(
         'open-state-changed',
@@ -193,11 +203,14 @@ export const KiwiMenu = GObject.registerClass(
           case 'menu':
             this._makeMenu(item.title, item.cmds);
             
-            // Add custom menu item right after App Store entry
+            // Add custom menu items right after App Store entry (up to custom-menu-count)
             if (!customMenuAdded && item.commandSettingKey === 'app-store-command') {
-              const customItem = createCustomMenuItem(this._settings, this._gettext.bind(this));
-              if (customItem) {
-                this.menu.addMenuItem(customItem);
+              const customMenuCount = this._settings.get_int('custom-menu-count');
+              for (let i = 1; i <= customMenuCount; i++) {
+                const customItem = createCustomMenuItem(this._settings, this._gettext.bind(this), i);
+                if (customItem) {
+                  this.menu.addMenuItem(customItem);
+                }
               }
               customMenuAdded = true;
             }

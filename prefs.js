@@ -143,194 +143,236 @@ const OptionsPage = GObject.registerClass(
 
       menuGroup.add(appStoreCommandRow);
 
-      // Custom menu item section - using ExpanderRow
-      const customMenuExpanderRow = new Adw.ExpanderRow({
-        title: this._('Custom Menu Item'),
-        subtitle: this._('Add a custom menu entry with your own label and command.'),
-        show_enable_switch: true,
-        enable_expansion: this._settings.get_boolean('custom-menu-enabled'),
+      // Custom menu count selector
+      const customMenuCountList = new Gtk.StringList();
+      for (let i = 0; i <= 10; i++) {
+        customMenuCountList.append(i.toString());
+      }
+
+      const customMenuCountRow = new Adw.ComboRow({
+        title: this._('Custom Menu Items'),
+        subtitle: this._('Number of custom menu items to display (0-10).'),
+        model: customMenuCountList,
+        selected: this._settings.get_int('custom-menu-count'),
       });
 
-      // Custom menu label entry
-      const defaultMenuLabel = '';
-      const customMenuLabelRow = new Adw.EntryRow({
-        title: this._('Menu Label'),
-      });
-      customMenuLabelRow.set_placeholder_text?.('My Custom Entry');
-      customMenuLabelRow.set_text(this._settings.get_string('custom-menu-label'));
+      menuGroup.add(customMenuCountRow);
 
-      const labelRestoreButton = new Gtk.Button({
-        icon_name: 'edit-undo-symbolic',
-        has_frame: false,
-        tooltip_text: this._('Restore Default'),
-        valign: Gtk.Align.CENTER,
-      });
-      labelRestoreButton.add_css_class?.('circular');
+      // Store expander rows for visibility control
+      const customMenuExpanders = [];
 
-      const labelAcceptButton = new Gtk.Button({
-        icon_name: 'emblem-ok-symbolic',
-        has_frame: false,
-        tooltip_text: this._('Apply Changes'),
-        valign: Gtk.Align.CENTER,
-      });
-      labelAcceptButton.add_css_class?.('circular');
-      labelAcceptButton.set_visible(false);
-      labelAcceptButton.set_sensitive(false);
+      // Custom menu items section - 10 items max
+      for (let i = 1; i <= 10; i++) {
+        const enabledKey = `custom-menu-${i}-enabled`;
+        const labelKey = `custom-menu-${i}-label`;
+        const commandKey = `custom-menu-${i}-command`;
 
-      customMenuLabelRow.add_suffix?.(labelAcceptButton);
-      customMenuLabelRow.add_suffix?.(labelRestoreButton);
+        const customMenuExpanderRow = new Adw.ExpanderRow({
+          title: this._('Custom Menu Item %d').format(i),
+          subtitle: this._('Add a custom menu entry with your own label and command.'),
+          show_enable_switch: true,
+          enable_expansion: this._settings.get_boolean(enabledKey),
+        });
 
-      const clearLabelFocus = () => {
-        const root = customMenuLabelRow.get_root?.();
-        if (root && typeof root.set_focus === 'function') {
-          root.set_focus(null);
-        }
-      };
+        // Custom menu label entry
+        const defaultMenuLabel = '';
+        const customMenuLabelRow = new Adw.EntryRow({
+          title: this._('Menu Label'),
+        });
+        customMenuLabelRow.set_placeholder_text?.('My Custom Entry');
+        customMenuLabelRow.set_text(this._settings.get_string(labelKey));
 
-      const updateLabelRestoreButtonState = () => {
-        const currentText = customMenuLabelRow.get_text
-          ? customMenuLabelRow.get_text()
-          : customMenuLabelRow.text ?? '';
-        const isDefault = currentText.trim() === defaultMenuLabel;
-        labelRestoreButton.set_sensitive(!isDefault);
-        labelRestoreButton.set_visible(!isDefault);
-        labelAcceptButton.set_sensitive(!isDefault);
-      };
+        const labelRestoreButton = new Gtk.Button({
+          icon_name: 'edit-undo-symbolic',
+          has_frame: false,
+          tooltip_text: this._('Restore Default'),
+          valign: Gtk.Align.CENTER,
+        });
+        labelRestoreButton.add_css_class?.('circular');
 
-      labelRestoreButton.connect('clicked', () => {
-        customMenuLabelRow.set_text(defaultMenuLabel);
-        clearLabelFocus();
-      });
-
-      labelAcceptButton.connect('clicked', () => {
-        clearLabelFocus();
-      });
-
-      customMenuLabelRow.connect('notify::text', updateLabelRestoreButtonState);
-      updateLabelRestoreButtonState();
-
-      const labelKeyController = new Gtk.EventControllerKey();
-      labelKeyController.connect('key-pressed', (controller, keyval) => {
-        if (keyval === Gdk.KEY_Escape) {
-          clearLabelFocus();
-          return true;
-        }
-        return false;
-      });
-      customMenuLabelRow.add_controller?.(labelKeyController);
-
-      const labelFocusController = new Gtk.EventControllerFocus();
-      labelFocusController.connect('enter', () => {
-        labelAcceptButton.set_visible(true);
-      });
-      labelFocusController.connect('leave', () => {
+        const labelAcceptButton = new Gtk.Button({
+          icon_name: 'emblem-ok-symbolic',
+          has_frame: false,
+          tooltip_text: this._('Apply Changes'),
+          valign: Gtk.Align.CENTER,
+        });
+        labelAcceptButton.add_css_class?.('circular');
         labelAcceptButton.set_visible(false);
-      });
-      customMenuLabelRow.add_controller?.(labelFocusController);
+        labelAcceptButton.set_sensitive(false);
 
-      customMenuExpanderRow.add_row(customMenuLabelRow);
+        customMenuLabelRow.add_suffix?.(labelAcceptButton);
+        customMenuLabelRow.add_suffix?.(labelRestoreButton);
 
-      // Custom menu command entry
-      const defaultMenuCommand = '';
-      const customMenuCommandRow = new Adw.EntryRow({
-        title: this._('Command'),
-      });
-      customMenuCommandRow.set_placeholder_text?.('gnome-terminal');
-      customMenuCommandRow.set_text(this._settings.get_string('custom-menu-command'));
+        const clearLabelFocus = () => {
+          const root = customMenuLabelRow.get_root?.();
+          if (root && typeof root.set_focus === 'function') {
+            root.set_focus(null);
+          }
+        };
 
-      const commandRestoreButton = new Gtk.Button({
-        icon_name: 'edit-undo-symbolic',
-        has_frame: false,
-        tooltip_text: this._('Restore Default'),
-        valign: Gtk.Align.CENTER,
-      });
-      commandRestoreButton.add_css_class?.('circular');
+        const updateLabelRestoreButtonState = () => {
+          const currentText = customMenuLabelRow.get_text
+            ? customMenuLabelRow.get_text()
+            : customMenuLabelRow.text ?? '';
+          const isDefault = currentText.trim() === defaultMenuLabel;
+          labelRestoreButton.set_sensitive(!isDefault);
+          labelRestoreButton.set_visible(!isDefault);
+          labelAcceptButton.set_sensitive(!isDefault);
+        };
 
-      const commandAcceptButton = new Gtk.Button({
-        icon_name: 'emblem-ok-symbolic',
-        has_frame: false,
-        tooltip_text: this._('Apply Changes'),
-        valign: Gtk.Align.CENTER,
-      });
-      commandAcceptButton.add_css_class?.('circular');
-      commandAcceptButton.set_visible(false);
-      commandAcceptButton.set_sensitive(false);
+        labelRestoreButton.connect('clicked', () => {
+          customMenuLabelRow.set_text(defaultMenuLabel);
+          clearLabelFocus();
+        });
 
-      customMenuCommandRow.add_suffix?.(commandAcceptButton);
-      customMenuCommandRow.add_suffix?.(commandRestoreButton);
+        labelAcceptButton.connect('clicked', () => {
+          clearLabelFocus();
+        });
 
-      const clearCommandFocus = () => {
-        const root = customMenuCommandRow.get_root?.();
-        if (root && typeof root.set_focus === 'function') {
-          root.set_focus(null);
-        }
-      };
+        customMenuLabelRow.connect('notify::text', updateLabelRestoreButtonState);
+        updateLabelRestoreButtonState();
 
-      const updateCommandRestoreButtonState = () => {
-        const currentText = customMenuCommandRow.get_text
-          ? customMenuCommandRow.get_text()
-          : customMenuCommandRow.text ?? '';
-        const isDefault = currentText.trim() === defaultMenuCommand;
-        commandRestoreButton.set_sensitive(!isDefault);
-        commandRestoreButton.set_visible(!isDefault);
-        commandAcceptButton.set_sensitive(!isDefault);
-      };
+        const labelKeyController = new Gtk.EventControllerKey();
+        labelKeyController.connect('key-pressed', (controller, keyval) => {
+          if (keyval === Gdk.KEY_Escape) {
+            clearLabelFocus();
+            return true;
+          }
+          return false;
+        });
+        customMenuLabelRow.add_controller?.(labelKeyController);
 
-      commandRestoreButton.connect('clicked', () => {
-        customMenuCommandRow.set_text(defaultMenuCommand);
-        clearCommandFocus();
-      });
+        const labelFocusController = new Gtk.EventControllerFocus();
+        labelFocusController.connect('enter', () => {
+          labelAcceptButton.set_visible(true);
+        });
+        labelFocusController.connect('leave', () => {
+          labelAcceptButton.set_visible(false);
+        });
+        customMenuLabelRow.add_controller?.(labelFocusController);
 
-      commandAcceptButton.connect('clicked', () => {
-        clearCommandFocus();
-      });
+        customMenuExpanderRow.add_row(customMenuLabelRow);
 
-      customMenuCommandRow.connect('notify::text', updateCommandRestoreButtonState);
-      updateCommandRestoreButtonState();
+        // Custom menu command entry
+        const defaultMenuCommand = '';
+        const customMenuCommandRow = new Adw.EntryRow({
+          title: this._('Command'),
+        });
+        customMenuCommandRow.set_placeholder_text?.('gnome-terminal');
+        customMenuCommandRow.set_text(this._settings.get_string(commandKey));
 
-      const commandKeyController = new Gtk.EventControllerKey();
-      commandKeyController.connect('key-pressed', (controller, keyval) => {
-        if (keyval === Gdk.KEY_Escape) {
-          clearCommandFocus();
-          return true;
-        }
-        return false;
-      });
-      customMenuCommandRow.add_controller?.(commandKeyController);
+        const commandRestoreButton = new Gtk.Button({
+          icon_name: 'edit-undo-symbolic',
+          has_frame: false,
+          tooltip_text: this._('Restore Default'),
+          valign: Gtk.Align.CENTER,
+        });
+        commandRestoreButton.add_css_class?.('circular');
 
-      const commandFocusController = new Gtk.EventControllerFocus();
-      commandFocusController.connect('enter', () => {
-        commandAcceptButton.set_visible(true);
-      });
-      commandFocusController.connect('leave', () => {
+        const commandAcceptButton = new Gtk.Button({
+          icon_name: 'emblem-ok-symbolic',
+          has_frame: false,
+          tooltip_text: this._('Apply Changes'),
+          valign: Gtk.Align.CENTER,
+        });
+        commandAcceptButton.add_css_class?.('circular');
         commandAcceptButton.set_visible(false);
+        commandAcceptButton.set_sensitive(false);
+
+        customMenuCommandRow.add_suffix?.(commandAcceptButton);
+        customMenuCommandRow.add_suffix?.(commandRestoreButton);
+
+        const clearCommandFocus = () => {
+          const root = customMenuCommandRow.get_root?.();
+          if (root && typeof root.set_focus === 'function') {
+            root.set_focus(null);
+          }
+        };
+
+        const updateCommandRestoreButtonState = () => {
+          const currentText = customMenuCommandRow.get_text
+            ? customMenuCommandRow.get_text()
+            : customMenuCommandRow.text ?? '';
+          const isDefault = currentText.trim() === defaultMenuCommand;
+          commandRestoreButton.set_sensitive(!isDefault);
+          commandRestoreButton.set_visible(!isDefault);
+          commandAcceptButton.set_sensitive(!isDefault);
+        };
+
+        commandRestoreButton.connect('clicked', () => {
+          customMenuCommandRow.set_text(defaultMenuCommand);
+          clearCommandFocus();
+        });
+
+        commandAcceptButton.connect('clicked', () => {
+          clearCommandFocus();
+        });
+
+        customMenuCommandRow.connect('notify::text', updateCommandRestoreButtonState);
+        updateCommandRestoreButtonState();
+
+        const commandKeyController = new Gtk.EventControllerKey();
+        commandKeyController.connect('key-pressed', (controller, keyval) => {
+          if (keyval === Gdk.KEY_Escape) {
+            clearCommandFocus();
+            return true;
+          }
+          return false;
+        });
+        customMenuCommandRow.add_controller?.(commandKeyController);
+
+        const commandFocusController = new Gtk.EventControllerFocus();
+        commandFocusController.connect('enter', () => {
+          commandAcceptButton.set_visible(true);
+        });
+        commandFocusController.connect('leave', () => {
+          commandAcceptButton.set_visible(false);
+        });
+        customMenuCommandRow.add_controller?.(commandFocusController);
+
+        customMenuExpanderRow.add_row(customMenuCommandRow);
+
+        menuGroup.add(customMenuExpanderRow);
+        customMenuExpanders.push(customMenuExpanderRow);
+
+        // Handle custom menu enable/disable
+        customMenuExpanderRow.connect('notify::enable-expansion', (widget) => {
+          const isEnabled = widget.get_enable_expansion();
+          this._settings.set_boolean(enabledKey, isEnabled);
+        });
+
+        // Bind custom menu settings
+        this._settings.bind(
+          labelKey,
+          customMenuLabelRow,
+          'text',
+          Gio.SettingsBindFlags.DEFAULT
+        );
+
+        this._settings.bind(
+          commandKey,
+          customMenuCommandRow,
+          'text',
+          Gio.SettingsBindFlags.DEFAULT
+        );
+      }
+
+      // Function to update visibility of custom menu expanders
+      const updateCustomMenuVisibility = () => {
+        const count = this._settings.get_int('custom-menu-count');
+        customMenuExpanders.forEach((expander, index) => {
+          expander.set_visible(index < count);
+        });
+      };
+
+      // Initial visibility update
+      updateCustomMenuVisibility();
+
+      // Update visibility when count changes
+      customMenuCountRow.connect('notify::selected', (widget) => {
+        this._settings.set_int('custom-menu-count', widget.selected);
+        updateCustomMenuVisibility();
       });
-      customMenuCommandRow.add_controller?.(commandFocusController);
-
-      customMenuExpanderRow.add_row(customMenuCommandRow);
-
-      menuGroup.add(customMenuExpanderRow);
-
-      // Handle custom menu enable/disable
-      customMenuExpanderRow.connect('notify::enable-expansion', (widget) => {
-        const isEnabled = widget.get_enable_expansion();
-        this._settings.set_boolean('custom-menu-enabled', isEnabled);
-      });
-
-      // Bind custom menu settings
-      this._settings.bind(
-        'custom-menu-label',
-        customMenuLabelRow,
-        'text',
-        Gio.SettingsBindFlags.DEFAULT
-      );
-
-      this._settings.bind(
-        'custom-menu-command',
-        customMenuCommandRow,
-        'text',
-        Gio.SettingsBindFlags.DEFAULT
-      );
 
       const behaviorGroup = new Adw.PreferencesGroup({
         title: this._('Panel'),

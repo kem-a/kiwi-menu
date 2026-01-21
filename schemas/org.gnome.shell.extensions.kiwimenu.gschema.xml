@@ -31,20 +31,160 @@
       <summary>App Store command</summary>
       <description>Command executed when launching the App Store menu item</description>
     </key>
-    <key type="b" name="custom-menu-enabled">
+    <key type="i" name="custom-menu-count">
+      <default>0</default>
+      <summary>Number of custom menu items</summary>
+      <description>How many custom menu items to display (0-10)</description>
+    </key>
+    <key type="b" name="custom-menu-1-enabled">
       <default>false</default>
-      <summary>Enable custom menu item</summary>
-      <description>Enable or disable the custom menu item</description>
+      <summary>Enable custom menu item 1</summary>
+      <description>Enable or disable custom menu item 1</description>
     </key>
-    <key type="s" name="custom-menu-label">
+    <key type="s" name="custom-menu-1-label">
       <default>''</default>
-      <summary>Custom menu item label</summary>
-      <description>The label text to display for the custom menu item</description>
+      <summary>Custom menu item 1 label</summary>
+      <description>The label text to display for custom menu item 1</description>
     </key>
-    <key type="s" name="custom-menu-command">
+    <key type="s" name="custom-menu-1-command">
       <default>''</default>
-      <summary>Custom menu item command</summary>
-      <description>Command to execute when the custom menu item is activated</description>
+      <summary>Custom menu item 1 command</summary>
+      <description>Command to execute when custom menu item 1 is activated</description>
+    </key>
+    <key type="b" name="custom-menu-2-enabled">
+      <default>false</default>
+      <summary>Enable custom menu item 2</summary>
+      <description>Enable or disable custom menu item 2</description>
+    </key>
+    <key type="s" name="custom-menu-2-label">
+      <default>''</default>
+      <summary>Custom menu item 2 label</summary>
+      <description>The label text to display for custom menu item 2</description>
+    </key>
+    <key type="s" name="custom-menu-2-command">
+      <default>''</default>
+      <summary>Custom menu item 2 command</summary>
+      <description>Command to execute when custom menu item 2 is activated</description>
+    </key>
+    <key type="b" name="custom-menu-3-enabled">
+      <default>false</default>
+      <summary>Enable custom menu item 3</summary>
+      <description>Enable or disable custom menu item 3</description>
+    </key>
+    <key type="s" name="custom-menu-3-label">
+      <default>''</default>
+      <summary>Custom menu item 3 label</summary>
+      <description>The label text to display for custom menu item 3</description>
+    </key>
+    <key type="s" name="custom-menu-3-command">
+      <default>''</default>
+      <summary>Custom menu item 3 command</summary>
+      <description>Command to execute when custom menu item 3 is activated</description>
+    </key>
+    <key type="b" name="custom-menu-4-enabled">
+      <default>false</default>
+      <summary>Enable custom menu item 4</summary>
+      <description>Enable or disable custom menu item 4</description>
+    </key>
+    <key type="s" name="custom-menu-4-label">
+      <default>''</default>
+      <summary>Custom menu item 4 label</summary>
+      <description>The label text to display for custom menu item 4</description>
+    </key>
+    <key type="s" name="custom-menu-4-command">
+      <default>''</default>
+      <summary>Custom menu item 4 command</summary>
+      <description>Command to execute when custom menu item 4 is activated</description>
+    </key>
+    <key type="b" name="custom-menu-5-enabled">
+      <default>false</default>
+      <summary>Enable custom menu item 5</summary>
+      <description>Enable or disable custom menu item 5</description>
+    </key>
+    <key type="s" name="custom-menu-5-label">
+      <default>''</default>
+      <summary>Custom menu item 5 label</summary>
+      <description>The label text to display for custom menu item 5</description>
+    </key>
+    <key type="s" name="custom-menu-5-command">
+      <default>''</default>
+      <summary>Custom menu item 5 command</summary>
+      <description>Command to execute when custom menu item 5 is activated</description>
+    </key>
+    <key type="b" name="custom-menu-6-enabled">
+      <default>false</default>
+      <summary>Enable custom menu item 6</summary>
+      <description>Enable or disable custom menu item 6</description>
+    </key>
+    <key type="s" name="custom-menu-6-label">
+      <default>''</default>
+      <summary>Custom menu item 6 label</summary>
+      <description>The label text to display for custom menu item 6</description>
+    </key>
+    <key type="s" name="custom-menu-6-command">
+      <default>''</default>
+      <summary>Custom menu item 6 command</summary>
+      <description>Command to execute when custom menu item 6 is activated</description>
+    </key>
+    <key type="b" name="custom-menu-7-enabled">
+      <default>false</default>
+      <summary>Enable custom menu item 7</summary>
+      <description>Enable or disable custom menu item 7</description>
+    </key>
+    <key type="s" name="custom-menu-7-label">
+      <default>''</default>
+      <summary>Custom menu item 7 label</summary>
+      <description>The label text to display for custom menu item 7</description>
+    </key>
+    <key type="s" name="custom-menu-7-command">
+      <default>''</default>
+      <summary>Custom menu item 7 command</summary>
+      <description>Command to execute when custom menu item 7 is activated</description>
+    </key>
+    <key type="b" name="custom-menu-8-enabled">
+      <default>false</default>
+      <summary>Enable custom menu item 8</summary>
+      <description>Enable or disable custom menu item 8</description>
+    </key>
+    <key type="s" name="custom-menu-8-label">
+      <default>''</default>
+      <summary>Custom menu item 8 label</summary>
+      <description>The label text to display for custom menu item 8</description>
+    </key>
+    <key type="s" name="custom-menu-8-command">
+      <default>''</default>
+      <summary>Custom menu item 8 command</summary>
+      <description>Command to execute when custom menu item 8 is activated</description>
+    </key>
+    <key type="b" name="custom-menu-9-enabled">
+      <default>false</default>
+      <summary>Enable custom menu item 9</summary>
+      <description>Enable or disable custom menu item 9</description>
+    </key>
+    <key type="s" name="custom-menu-9-label">
+      <default>''</default>
+      <summary>Custom menu item 9 label</summary>
+      <description>The label text to display for custom menu item 9</description>
+    </key>
+    <key type="s" name="custom-menu-9-command">
+      <default>''</default>
+      <summary>Custom menu item 9 command</summary>
+      <description>Command to execute when custom menu item 9 is activated</description>
+    </key>
+    <key type="b" name="custom-menu-10-enabled">
+      <default>false</default>
+      <summary>Enable custom menu item 10</summary>
+      <description>Enable or disable custom menu item 10</description>
+    </key>
+    <key type="s" name="custom-menu-10-label">
+      <default>''</default>
+      <summary>Custom menu item 10 label</summary>
+      <description>The label text to display for custom menu item 10</description>
+    </key>
+    <key type="s" name="custom-menu-10-command">
+      <default>''</default>
+      <summary>Custom menu item 10 command</summary>
+      <description>Command to execute when custom menu item 10 is activated</description>
     </key>
     <key type="i" name="prefs-default-width">
       <default>700</default>

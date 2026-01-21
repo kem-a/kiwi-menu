@@ -9,23 +9,28 @@ import * as Util from 'resource:///org/gnome/shell/misc/util.js';
 
 /**
  * Creates a custom menu item if enabled in settings.
- * 
+ *
  * @param {Gio.Settings} settings - The extension settings object
  * @param {Function} gettextFunc - Translation function
+ * @param {number} index - The custom menu item index (1-10)
  * @returns {PopupMenu.PopupMenuItem|null} The custom menu item or null if disabled
  */
-export function createCustomMenuItem(settings, gettextFunc) {
+export function createCustomMenuItem(settings, gettextFunc, index = 1) {
     if (!settings) {
         return null;
     }
 
-    const enabled = settings.get_boolean('custom-menu-enabled');
+    const enabledKey = `custom-menu-${index}-enabled`;
+    const labelKey = `custom-menu-${index}-label`;
+    const commandKey = `custom-menu-${index}-command`;
+
+    const enabled = settings.get_boolean(enabledKey);
     if (!enabled) {
         return null;
     }
 
-    const label = settings.get_string('custom-menu-label');
-    const command = settings.get_string('custom-menu-command');
+    const label = settings.get_string(labelKey);
+    const command = settings.get_string(commandKey);
 
     // Don't create menu item if label or command is empty
     const trimmedLabel = label?.trim?.() ?? '';

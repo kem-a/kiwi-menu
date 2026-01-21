@@ -19,7 +19,7 @@ Kiwi Menu replaces the Activities button with a compact, macOS-inspired launcher
 - **Recent items submenu**: Hover or click to browse recent files and folders with automatic section headers and quick launch support.
 - **Force Quit overlay**: Launches the built-in xkill helper from the menu when an app misbehaves. Optionaly, can also close all apps in current workspace.
 - **Custom AppStore command**: Add your distro specific App store shortcut
-- **Personalized Menu Item**: Add one custom menu entry of your choice
+- **Custom Menu Items**: Add up to 10 custom menu entries of your choice
 - **Adaptive logout label**: Personalizes the log out entry with your full name when available.
 - **Curated session controls**: Sleep, restart, shut down, lock, and log out entries mirror the macOS Apple menu workflow.
 - **Hide Activities**: Hide activities button in top panel.
