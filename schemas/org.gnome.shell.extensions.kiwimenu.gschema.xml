@@ -54,5 +54,10 @@
       <default>600</default>
       <summary>Default height for the preferences window</summary>
     </key>
+    <key type="s" name="config-version">
+      <default>''</default>
+      <summary>Applied config version</summary>
+      <description>Tracks which config.json version has been applied to avoid re-applying on every startup</description>
+    </key>
   </schema>
 </schemalist>

@@ -9,10 +9,15 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import { KiwiMenu } from './src/kiwimenu.js';
 import { QuickSettingsActionsController } from './src/hideQSbuttons.js';
 import { UserSwitcherController } from './src/userSwitcher.js';
+import { applyConfig } from './src/configLoader.js';
 
 export default class KiwiMenuExtension extends Extension {
   enable() {
     this._settings = this.getSettings();
+
+    // Apply distribution config on first run (or when config version changes)
+    applyConfig(this._settings, this.path);
+
     this._indicator = new KiwiMenu(this._settings, this.path, this);
     Main.panel.addToStatusArea('KiwiMenuButton', this._indicator, 0, 'left');
 
