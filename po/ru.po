@@ -1,0 +1,277 @@
+# Russian translation for Kiwi Menu
+# Copyright (C) 2026 Arnis Kemlers
+# This file is distributed under the same license as the kiwimenu package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kiwimenu\n"
+"Report-Msgid-Bugs-To: https://github.com/kem-a/kiwimenu-kemma/issues\n"
+"POT-Creation-Date: 2026-05-25 00:00+0000\n"
+"PO-Revision-Date: 2026-07-25 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/kiwimenu.js
+msgid "About This PC"
+msgstr "Об этом компьютере"
+
+#: src/kiwimenu.js
+msgid "System Settings..."
+msgstr "Настройки системы..."
+
+#: src/kiwimenu.js
+msgid "App Store..."
+msgstr "Магазин приложений..."
+
+#: src/kiwimenu.js
+msgid "Recent Items"
+msgstr "Недавние элементы"
+
+#: src/kiwimenu.js
+msgid "Force Quit"
+msgstr "Принудительное завершение"
+
+#: src/kiwimenu.js
+msgid "Sleep"
+msgstr "Спящий режим"
+
+#: src/kiwimenu.js
+msgid "Restart..."
+msgstr "Перезагрузка..."
+
+#: src/kiwimenu.js
+msgid "Shut Down..."
+msgstr "Выключение..."
+
+#: src/kiwimenu.js
+msgid "Lock Screen"
+msgstr "Блокировка экрана"
+
+#: src/kiwimenu.js
+msgid "Switch User..."
+msgstr "Сменить пользователя..."
+
+#: src/kiwimenu.js
+msgid "Log Out..."
+msgstr "Выйти..."
+
+#: src/kiwimenu.js
+#, javascript-format
+msgid "Log Out %s..."
+msgstr "Выйти из %s..."
+
+#: src/recentItemsSubmenu.js
+msgid "No recent items"
+msgstr "Нет недавних элементов"
+
+#: src/recentItemsSubmenu.js
+msgid "Documents"
+msgstr "Документы"
+
+#: src/recentItemsSubmenu.js
+msgid "Folders"
+msgstr "Папки"
+
+#: src/recentItemsSubmenu.js
+msgid "Applications"
+msgstr "Приложения"
+
+#: src/recentItemsSubmenu.js
+msgid "Clear Menu"
+msgstr "Очистить меню"
+
+#: src/userSwitcher.js
+msgid "No eligible user accounts found"
+msgstr "Не найдено подходящих учётных записей"
+
+#: src/userSwitcher.js
+msgid "Login Window..."
+msgstr "Окно входа..."
+
+#: src/userSwitcher.js
+msgid "Users & Groups Settings..."
+msgstr "Настройки пользователей и групп..."
+
+#: app/forceQuitWindow.js
+msgid "Force Quit Applications"
+msgstr "Принудительное завершение приложений"
+
+#: app/forceQuitWindow.js
+msgid "If an app doesn't respond for a while, select its name and click Force Quit."
+msgstr "Если приложение не отвечает, выберите его название и нажмите «Принудительно завершить»."
+
+#: app/aboutWindow.js
+msgid "Chip"
+msgstr "Процессор"
+
+#: app/aboutWindow.js
+msgid "Memory"
+msgstr "Память"
+
+#: app/aboutWindow.js
+msgid "Serial number"
+msgstr "Серийный номер"
+
+#: app/aboutWindow.js
+msgid "OS"
+msgstr "ОС"
+
+#: app/aboutWindow.js
+msgid "More Info..."
+msgstr "Подробнее..."
+
+#: prefs.js
+msgid "Options"
+msgstr "Параметры"
+
+#: prefs.js
+msgid "Menu"
+msgstr "Меню"
+
+#: prefs.js
+msgid "Adjust how the Kiwi Menu looks and behaves."
+msgstr "Настройте внешний вид и поведение Kiwi Menu."
+
+#: prefs.js
+msgid "Menu Icon"
+msgstr "Значок меню"
+
+#: prefs.js
+msgid "App Store Command"
+msgstr "Команда магазина приложений"
+
+#: prefs.js
+msgid "Command launched when opening the App Store menu item."
+msgstr "Команда, запускаемая при открытии пункта «Магазин приложений»."
+
+#: prefs.js
+msgid "Custom Menu Item"
+msgstr "Пользовательский пункт меню"
+
+#: prefs.js
+msgid "Add a custom menu entry with your own label and command."
+msgstr "Добавьте пользовательский пункт меню со своей подписью и командой."
+
+#: prefs.js
+msgid "Menu Label"
+msgstr "Подпись меню"
+
+#: prefs.js
+msgid "Command"
+msgstr "Команда"
+
+#: prefs.js
+msgid "Restore Default"
+msgstr "Восстановить по умолчанию"
+
+#: prefs.js
+msgid "Choose the icon to display in the panel."
+msgstr "Выберите значок для отображения на панели."
+
+#: prefs.js
+msgid "Panel"
+msgstr "Панель"
+
+#: prefs.js
+msgid "Hide or show the Activities button from the top bar."
+msgstr "Скрыть или показать кнопку «Деятельность» на верхней панели."
+
+#: prefs.js
+msgid "Hide Activities Menu"
+msgstr "Скрыть меню «Деятельность»"
+
+#: prefs.js
+msgid "Display the Activities button in the top panel."
+msgstr "Показывать кнопку «Деятельность» на верхней панели."
+
+#: prefs.js
+msgid "Quick Settings"
+msgstr "Быстрые настройки"
+
+#: prefs.js
+msgid "Choose which default quick action buttons stay visible."
+msgstr "Выберите, какие кнопки быстрых действий останутся видимыми."
+
+#: prefs.js
+msgid "Hide Lock Screen Button"
+msgstr "Скрыть кнопку блокировки экрана"
+
+#: prefs.js
+msgid "Remove the lock screen quick action button."
+msgstr "Убрать кнопку быстрого действия «Блокировка экрана»."
+
+#: prefs.js
+msgid "Hide Power Button"
+msgstr "Скрыть кнопку питания"
+
+#: prefs.js
+msgid "Remove the power menu quick action button."
+msgstr "Убрать кнопку быстрого действия «Питание»."
+
+#: prefs.js
+msgid "Hide Settings Button"
+msgstr "Скрыть кнопку настроек"
+
+#: prefs.js
+msgid "Remove the settings shortcut quick action button."
+msgstr "Убрать кнопку быстрого действия «Настройки»."
+
+#: prefs.js
+msgid "About"
+msgstr "О программе"
+
+#: prefs.js
+msgid "Website"
+msgstr "Веб-сайт"
+
+#: prefs.js
+msgid "Report an Issue"
+msgstr "Сообщить об ошибке"
+
+#: prefs.js
+msgid "Credits"
+msgstr "Авторы"
+
+#: prefs.js
+msgid "Legal"
+msgstr "Правовая информация"
+
+#: prefs.js
+msgid "License"
+msgstr "Лицензия"
+
+#: prefs.js
+msgid "Kiwi Menu is free and open source software."
+msgstr "Kiwi Menu — это свободное программное обеспечение с открытым исходным кодом."
+
+#: prefs.js
+msgid "GNU General Public License v3.0"
+msgstr "GNU General Public License v3.0"
+
+#: prefs.js
+msgid "Copyright"
+msgstr "Авторское право"
+
+#: prefs.js
+msgid "Copyright © 2026 Arnis Kemlers. Licensed under the terms of the GNU General Public License version 3 or later."
+msgstr "Copyright © 2026 Arnis Kemlers. Лицензировано на условиях GNU General Public License версии 3 или позднее."
+
+#: prefs.js
+msgid "Become a sponsor on GitHub"
+msgstr "Стать спонсором на GitHub"
+
+#: prefs.js
+msgid "Sponsor Me ♡"
+msgstr "Поддержать автора ♡"
+
+#: prefs.js
+msgid "Apply Changes"
+msgstr "Применить изменения"
+
+#: prefs.js
+msgid "Change log"
+msgstr "Журнал изменений"
