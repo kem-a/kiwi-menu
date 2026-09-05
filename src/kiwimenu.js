@@ -28,8 +28,26 @@ const SYSTEM_ACTIONS = new Map([
   ['suspend', 'activateSuspend'],
   ['restart', 'activateRestart'],
   ['power-off', 'activatePowerOff'],
-  ['logout', 'activateLogout'],
 ]);
+
+// SystemActions.activateLogout() throws when GNOME hides its own Log Out entry
+// (single local user, single session type). Kiwi Menu always shows it, so call
+// the session manager directly. Mode 0 keeps the usual confirmation dialog.
+function activateLogout() {
+  Main.overview.hide();
+  Gio.DBus.session.call(
+    'org.gnome.SessionManager',
+    '/org/gnome/SessionManager',
+    'org.gnome.SessionManager',
+    'Logout',
+    new GLib.Variant('(u)', [0]),
+    null,
+    Gio.DBusCallFlags.NONE,
+    -1,
+    null,
+    null
+  );
+}
 
 async function loadJsonFileAsync(basePath, segments, cancellable) {
   const filePath = GLib.build_filenamev([basePath, ...segments]);
@@ -404,6 +422,7 @@ export const KiwiMenu = GObject.registerClass(
       const singleCmd = Array.isArray(cmds) && cmds.length === 1 ? cmds[0] : null;
       const isForceQuit = singleCmd === 'force-quit';
       const isAboutThisPc = singleCmd === 'about-this-pc';
+      const isLogout = singleCmd === 'logout';
       const systemAction = SYSTEM_ACTIONS.get(singleCmd);
 
       menuItem.connect('activate', () => {
@@ -416,6 +435,12 @@ export const KiwiMenu = GObject.registerClass(
         if (isAboutThisPc) {
           this.menu.close(true);
           this._openAboutWindow();
+          return;
+        }
+
+        if (isLogout) {
+          this.menu.close(true);
+          activateLogout();
           return;
         }
 
