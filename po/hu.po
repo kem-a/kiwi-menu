@@ -1,0 +1,278 @@
+# Hungarian translation for Kiwi Menu
+# Copyright (C) 2026 Arnis Kemlers
+# This file is distributed under the same license as the kiwimenu package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kiwimenu\n"
+"Report-Msgid-Bugs-To: https://github.com/kem-a/kiwimenu-kemma/issues\n"
+"POT-Creation-Date: 2026-05-25 00:00+0000\n"
+"PO-Revision-Date: 2026-10-05 23:30+0200\n"
+"Last-Translator: \n"
+"Language-Team: Hungarian\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/kiwimenu.js
+msgid "About This PC"
+msgstr "Erről a gépről"
+
+#: src/kiwimenu.js
+msgid "System Settings..."
+msgstr "Rendszerbeállítások…"
+
+#: src/kiwimenu.js
+msgid "App Store..."
+msgstr "Alkalmazásbolt…"
+
+#: src/kiwimenu.js
+msgid "Recent Items"
+msgstr "Legutóbbi elemek"
+
+#: src/kiwimenu.js
+msgid "Force Quit"
+msgstr "Kilépés kényszerítése"
+
+#: src/kiwimenu.js
+msgid "Sleep"
+msgstr "Alvás"
+
+#: src/kiwimenu.js
+msgid "Restart..."
+msgstr "Újraindítás…"
+
+#: src/kiwimenu.js
+msgid "Shut Down..."
+msgstr "Kikapcsolás…"
+
+#: src/kiwimenu.js
+msgid "Lock Screen"
+msgstr "Képernyő zárolása"
+
+#: src/kiwimenu.js
+msgid "Switch User..."
+msgstr "Felhasználóváltás…"
+
+#: src/kiwimenu.js
+msgid "Log Out..."
+msgstr "Kijelentkezés…"
+
+#: src/kiwimenu.js
+#, javascript-format
+msgid "Log Out %s..."
+msgstr "Kijelentkezés: %s…"
+
+#: src/recentItemsSubmenu.js
+msgid "No recent items"
+msgstr "Nincsenek legutóbbi elemek"
+
+#: src/recentItemsSubmenu.js
+msgid "Documents"
+msgstr "Dokumentumok"
+
+#: src/recentItemsSubmenu.js
+msgid "Folders"
+msgstr "Mappák"
+
+#: src/recentItemsSubmenu.js
+msgid "Applications"
+msgstr "Alkalmazások"
+
+#: src/recentItemsSubmenu.js
+msgid "Clear Menu"
+msgstr "Menü törlése"
+
+#: src/userSwitcher.js
+msgid "No eligible user accounts found"
+msgstr "Nincs másik felhasználói fiók"
+
+#: src/userSwitcher.js
+msgid "Login Window..."
+msgstr "Bejelentkezőképernyő…"
+
+#: src/userSwitcher.js
+msgid "Users & Groups Settings..."
+msgstr "Felhasználók beállításai…"
+
+#: app/forceQuitWindow.js
+msgid "Force Quit Applications"
+msgstr "Alkalmazások kényszerített bezárása"
+
+#: app/forceQuitWindow.js
+msgid "If an app doesn't respond for a while, select its name and click Force Quit."
+msgstr "Ha egy alkalmazás egy ideje nem válaszol, jelöld ki a nevét, és kattints a Kilépés kényszerítése gombra."
+
+#: app/aboutWindow.js
+msgid "Chip"
+msgstr "Processzor"
+
+#: app/aboutWindow.js
+msgid "Memory"
+msgstr "Memória"
+
+#: app/aboutWindow.js
+msgid "Serial number"
+msgstr "Sorozatszám"
+
+#: app/aboutWindow.js
+msgid "OS"
+msgstr "Rendszer"
+
+#: app/aboutWindow.js
+msgid "More Info..."
+msgstr "További információ…"
+
+#: prefs.js
+msgid "Options"
+msgstr "Beállítások"
+
+#: prefs.js
+msgid "Menu"
+msgstr "Menü"
+
+#: prefs.js
+msgid "Adjust how the Kiwi Menu looks and behaves."
+msgstr "A Kiwi Menu megjelenése és működése."
+
+#: prefs.js
+msgid "Menu Icon"
+msgstr "Menü ikonja"
+
+#: prefs.js
+msgid "App Store Command"
+msgstr "Alkalmazásbolt parancsa"
+
+#: prefs.js
+msgid "Command launched when opening the App Store menu item."
+msgstr "Ez a parancs fut az Alkalmazásbolt menüpontra kattintva."
+
+#: prefs.js
+msgid "Custom Menu Item"
+msgstr "Saját menüpont"
+
+#: prefs.js
+msgid "Add a custom menu entry with your own label and command."
+msgstr "Saját menüpont, saját névvel és paranccsal."
+
+#: prefs.js
+msgid "Menu Label"
+msgstr "Menüpont neve"
+
+#: prefs.js
+msgid "Command"
+msgstr "Parancs"
+
+#: prefs.js
+msgid "Restore Default"
+msgstr "Alapértelmezés visszaállítása"
+
+#: prefs.js
+msgid "Choose the icon to display in the panel."
+msgstr "A felső sávban megjelenő ikon."
+
+#: prefs.js
+msgid "Panel"
+msgstr "Felső sáv"
+
+#: prefs.js
+msgid "Hide or show the Activities button from the top bar."
+msgstr "A Tevékenységek gomb elrejtése vagy megjelenítése a felső sávban."
+
+#: prefs.js
+msgid "Hide Activities Menu"
+msgstr "Tevékenységek gomb elrejtése"
+
+#: prefs.js
+msgid "Display the Activities button in the top panel."
+msgstr "A Tevékenységek gomb a felső sávban."
+
+#: prefs.js
+msgid "Quick Settings"
+msgstr "Gyorsbeállítások"
+
+#: prefs.js
+msgid "Choose which default quick action buttons stay visible."
+msgstr "Mely gyorsgombok maradjanak láthatók."
+
+#: prefs.js
+msgid "Hide Lock Screen Button"
+msgstr "Zárolás gomb elrejtése"
+
+#: prefs.js
+msgid "Remove the lock screen quick action button."
+msgstr "A képernyőzárolás gyorsgombja eltűnik."
+
+#: prefs.js
+msgid "Hide Power Button"
+msgstr "Bekapcsológomb elrejtése"
+
+#: prefs.js
+msgid "Remove the power menu quick action button."
+msgstr "A kikapcsolás menü gyorsgombja eltűnik."
+
+#: prefs.js
+msgid "Hide Settings Button"
+msgstr "Beállítások gomb elrejtése"
+
+#: prefs.js
+msgid "Remove the settings shortcut quick action button."
+msgstr "A Beállítások gyorsgombja eltűnik."
+
+#: prefs.js
+msgid "About"
+msgstr "Névjegy"
+
+#: prefs.js
+msgid "Website"
+msgstr "Weboldal"
+
+#: prefs.js
+msgid "Report an Issue"
+msgstr "Hiba bejelentése"
+
+#: prefs.js
+msgid "Credits"
+msgstr "Közreműködők"
+
+#: prefs.js
+msgid "Legal"
+msgstr "Jogi információk"
+
+#: prefs.js
+msgid "License"
+msgstr "Licenc"
+
+#: prefs.js
+msgid "Kiwi Menu is free and open source software."
+msgstr "A Kiwi Menu szabad, nyílt forrású szoftver."
+
+#: prefs.js
+msgid "GNU General Public License v3.0"
+msgstr "GNU General Public License v3.0"
+
+#: prefs.js
+msgid "Copyright"
+msgstr "Szerzői jog"
+
+#: prefs.js
+msgid "Copyright © 2026 Arnis Kemlers. Licensed under the terms of the GNU General Public License version 3 or later."
+msgstr "Copyright © 2026 Arnis Kemlers. A GNU General Public License 3. vagy későbbi változatának feltételei szerint használható."
+
+#: prefs.js
+msgid "Become a sponsor on GitHub"
+msgstr "Támogatás a GitHubon"
+
+#: prefs.js
+msgid "Sponsor Me ♡"
+msgstr "Támogatás ♡"
+
+#: prefs.js
+msgid "Apply Changes"
+msgstr "Változtatások alkalmazása"
+
+#: prefs.js
+msgid "Change log"
+msgstr "Változások"
