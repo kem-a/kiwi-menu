@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kiwi Menu 1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/kem-a/kiwimenu-kemma/issues\n"
-"POT-Creation-Date: 2026-05-25 00:00+0000\n"
-"PO-Revision-Date: 2025-11-02 10:45+0800\n"
+"POT-Creation-Date: 2026-10-09 00:00+0000\n"
+"PO-Revision-Date: 2026-10-09 00:00+0800\n"
 "Last-Translator: Markson Hosben <marksonhosben@proton.me>\n"
 "Language-Team: Chinese\n"
 "Language: zh_CN\n"
@@ -253,3 +253,126 @@ msgstr "应用更改"
 #: prefs.js
 msgid "Change log"
 msgstr "更新日志"
+
+#: app/aboutWindow.js
+msgid "Chip"
+msgstr "芯片"
+
+#: app/aboutWindow.js
+msgid "Memory"
+msgstr "内存"
+
+#: app/aboutWindow.js
+msgid "Serial number"
+msgstr "序列号"
+
+#: app/aboutWindow.js
+msgid "OS"
+msgstr "操作系统"
+
+#: app/aboutWindow.js
+msgid "Desktop"
+msgstr "桌面"
+
+#: app/aboutWindow.js
+msgid "More Info..."
+msgstr "更多信息..."
+
+#: app/forceQuitWindow.js
+msgid "Force Quit Applications"
+msgstr "强制退出应用程序"
+
+#: app/forceQuitWindow.js
+msgid ""
+"If an app doesn't respond for a while, select its name and click Force Quit."
+msgstr "如果某个应用长时间无响应，请选中它并点击“强制退出”。"
+
+#: prefs.js
+msgid "Force Quit Shortcut"
+msgstr "强制退出快捷键"
+
+#: prefs.js
+msgid "Keyboard shortcut that opens the Force Quit window."
+msgstr "打开“强制退出”窗口的快捷键。"
+
+#: prefs.js
+msgid "Clear Shortcut"
+msgstr "清除快捷键"
+
+#: prefs.js
+msgid "Disabled"
+msgstr "已禁用"
+
+#: prefs.js
+msgid "macOS Style Shortcuts"
+msgstr "macOS 风格快捷键"
+
+#: prefs.js
+msgid "Show accelerator hints using macOS symbols (⌘ ⌥ ^ ⎋)."
+msgstr "使用 macOS 符号（⌘ ⌥ ^ ⎋）显示快捷键提示。"
+
+#: prefs.js
+msgid "Keyboard Shortcut"
+msgstr "快捷键"
+
+#: prefs.js
+msgid "Shortcut that runs the custom command."
+msgstr "运行自定义命令的快捷键。"
+
+#: prefs.js
+msgid "Set Shortcut"
+msgstr "设置快捷键"
+
+#: prefs.js
+msgid "Press a Shortcut"
+msgstr "按下快捷键"
+
+#: prefs.js
+msgid "Esc to cancel · Backspace to disable"
+msgstr "按 Esc 取消 · 按 Backspace 禁用"
+
+#: prefs.js
+msgid "Optional image shown next to the menu label."
+msgstr "菜单标签旁显示的可选图像。"
+
+#: prefs.js
+msgid "Icon"
+msgstr "图标"
+
+#: prefs.js
+msgid "Choose Icon File"
+msgstr "选择图标文件"
+
+#: prefs.js
+msgid "Remove Icon"
+msgstr "移除图标"
+
+#: prefs.js
+msgid "Selected file was not found."
+msgstr "未找到所选文件。"
+
+#: prefs.js
+msgid "Select Custom Menu Icon"
+msgstr "选择自定义菜单图标"
+
+#: prefs.js
+msgid "Images"
+msgstr "图像"
+
+#: src/recentItemsSubmenu.js
+msgid "Item unavailable"
+msgstr "项目不可用"
+
+#: src/recentItemsSubmenu.js
+#, javascript-format
+msgid "Could not open \"%s\"."
+msgstr "无法打开“%s”。"
+
+#: src/recentItemsSubmenu.js
+msgid "Application unavailable"
+msgstr "应用程序不可用"
+
+#: src/recentItemsSubmenu.js
+#, javascript-format
+msgid "Could not launch \"%s\"."
+msgstr "无法启动“%s”。"

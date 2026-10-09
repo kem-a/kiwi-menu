@@ -276,3 +276,97 @@ msgstr ""
 #: prefs.js
 msgid "Change log"
 msgstr ""
+
+#: prefs.js
+msgid "Force Quit Shortcut"
+msgstr ""
+
+#: prefs.js
+msgid "Keyboard shortcut that opens the Force Quit window."
+msgstr ""
+
+#: prefs.js
+msgid "Clear Shortcut"
+msgstr ""
+
+#: prefs.js
+msgid "Disabled"
+msgstr ""
+
+#: prefs.js
+msgid "macOS Style Shortcuts"
+msgstr ""
+
+#: prefs.js
+msgid "Show accelerator hints using macOS symbols (⌘ ⌥ ^ ⎋)."
+msgstr ""
+
+#: prefs.js
+msgid "Keyboard Shortcut"
+msgstr ""
+
+#: prefs.js
+msgid "Shortcut that runs the custom command."
+msgstr ""
+
+#: prefs.js
+msgid "Set Shortcut"
+msgstr ""
+
+#: prefs.js
+msgid "Press a Shortcut"
+msgstr ""
+
+#: prefs.js
+msgid "Esc to cancel · Backspace to disable"
+msgstr ""
+
+#: prefs.js
+msgid "Optional image shown next to the menu label."
+msgstr ""
+
+#: prefs.js
+msgid "Icon"
+msgstr ""
+
+#: prefs.js
+msgid "Choose Icon File"
+msgstr ""
+
+#: prefs.js
+msgid "Remove Icon"
+msgstr ""
+
+#: prefs.js
+msgid "Selected file was not found."
+msgstr ""
+
+#: prefs.js
+msgid "Select Custom Menu Icon"
+msgstr ""
+
+#: prefs.js
+msgid "Images"
+msgstr ""
+
+#: src/recentItemsSubmenu.js
+msgid "Item unavailable"
+msgstr ""
+
+#: src/recentItemsSubmenu.js
+#, javascript-format
+msgid "Could not open \"%s\"."
+msgstr ""
+
+#: src/recentItemsSubmenu.js
+msgid "Application unavailable"
+msgstr ""
+
+#: src/recentItemsSubmenu.js
+#, javascript-format
+msgid "Could not launch \"%s\"."
+msgstr ""
+
+#: app/aboutWindow.js
+msgid "Desktop"
+msgstr ""

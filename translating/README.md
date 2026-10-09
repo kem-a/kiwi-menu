@@ -24,7 +24,7 @@
 | Polish | pl | 🟢 Complete | 41/42 (97.6%) |
 | Portuguese | pt | 🟢 Complete | 41/42 (97.6%) |
 | Swedish | sv | 🟢 Complete | 41/42 (97.6%) |
-| Chinese (Simplified) | zh-CN | 🟢 Complete | 41/42 (97.6%) |
+| Chinese (Simplified) | zh-CN | 🟢 Complete | 88/88 (100%) |
 | Turkish | tr | 🟢 Complete | 41/42 (97.6%) |
 
 *Note: The "1 untranslated message" in some languages is just the empty header (`msgid ""`), which is standard in PO files.*
