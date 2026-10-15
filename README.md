@@ -1,4 +1,5 @@
 <!-- Row 1: install & reach -->
+
 [![Install on GNOME Extensions](https://img.shields.io/badge/Install_on-GNOME_Extensions-blue?logo=gnome)](https://extensions.gnome.org/extension/8697/kiwi-menu/)
 [![EGO downloads](https://img.shields.io/gnome-extensions/dt/kiwimenu@kemma?label=EGO%20downloads)](https://extensions.gnome.org/extension/8697/kiwi-menu/)
 ![Shell 45–49](https://img.shields.io/badge/GNOME_Shell-45–50-informational?logo=gnome)
@@ -10,9 +11,7 @@
 
 Kiwi Menu adds compact, macOS-inspired quick menu that keeps your most common session actions one click away.
 
-
 <img width="2261" height="1322" alt="Screenshot From 2026-07-21 edited-3" src="https://github.com/user-attachments/assets/2c23a992-6015-4b10-a4b8-91a397fdfc25" />
-
 
 ## Features
 
@@ -35,6 +34,10 @@ Recommended to pair with [Kiwi (is not Apple)](https://extensions.gnome.org/exte
 ## Known Issues
 
 - Recent Applications menu is cleared after log out. This is limitation of Gnome shell
+
+## Development
+
+After changing code, run `./install.sh` and then `dbus-run-session gnome-shell --devkit` to test.
 
 ## Translations
 

@@ -12,6 +12,13 @@ import Gtk from 'gi://Gtk';
 
 import { ExtensionPreferences, gettext as _ } from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
+import {
+  MENU_ICONS_ALL,
+  MENU_ICONS_NONE,
+  MENU_ICONS_TOP_THREE,
+  normalizeMenuIconsMode,
+} from './src/menuIcons.js';
+
 function loadIconsMetadata(sourcePath) {
   const textDecoder = new TextDecoder();
   const filePath = GLib.build_filenamev([
@@ -60,6 +67,8 @@ const OptionsPage = GObject.registerClass(
         model: iconsList,
         selected: this._settings.get_int('icon'),
       });
+
+      
 
       menuGroup.add(iconSelectorRow);
 
@@ -225,6 +234,37 @@ const OptionsPage = GObject.registerClass(
         'active',
         Gio.SettingsBindFlags.DEFAULT
       );
+
+      // Menu item icons
+      const menuIconsModes = [MENU_ICONS_ALL, MENU_ICONS_TOP_THREE, MENU_ICONS_NONE];
+      const menuIconsList = new Gtk.StringList();
+      [
+        this._('All entries'),
+        this._('Top three only'),
+        this._('None'),
+      ].forEach((label) => menuIconsList.append(label));
+
+      const menuIconsRow = new Adw.ComboRow({
+        title: this._('Menu Item Icons'),
+        subtitle: this._('Show icons on every entry, on the top three (About This PC, System Settings, App Store) only, or on none.'),
+        model: menuIconsList,
+        selected: menuIconsModes.indexOf(normalizeMenuIconsMode(this._settings.get_string('menu-icons'))),
+      });
+      menuGroup.add(menuIconsRow);
+
+      menuIconsRow.connect('notify::selected', () => {
+        const mode = menuIconsModes[menuIconsRow.get_selected()];
+        if (mode) {
+          this._settings.set_string('menu-icons', mode);
+        }
+      });
+
+      this._settings.connect('changed::menu-icons', () => {
+        const index = menuIconsModes.indexOf(normalizeMenuIconsMode(this._settings.get_string('menu-icons')));
+        if (index >= 0 && index !== menuIconsRow.get_selected()) {
+          menuIconsRow.set_selected(index);
+        }
+      });
 
       // Custom menu item section - using ExpanderRow
       const customMenuExpanderRow = new Adw.ExpanderRow({

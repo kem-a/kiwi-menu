@@ -56,6 +56,16 @@
       <summary>Custom menu item shortcut</summary>
       <description>Keyboard shortcut that runs the custom menu item command</description>
     </key>
+    <key type="s" name="menu-icons">
+      <default>'all'</default>
+      <choices>
+        <choice value='all'/>
+        <choice value='top-three'/>
+        <choice value='none'/>
+      </choices>
+      <summary>Menu Item Icons</summary>
+      <description>Which entries show an icon. 'all' shows every icon, 'top-three' keeps it only on About This PC, System Settings and App Store (as macOS does), 'none' hides them. The Recent Items submenu keeps its icons.</description>
+    </key>
     <key type="b" name="macos-accelerators">
       <default>false</default>
       <summary>macOS style accelerator symbols</summary>

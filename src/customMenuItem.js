@@ -13,9 +13,10 @@ import * as Util from 'resource:///org/gnome/shell/misc/util.js';
  * 
  * @param {Gio.Settings} settings - The extension settings object
  * @param {Function} gettextFunc - Translation function
+ * @param {boolean} showIcon - Whether the item renders its configured icon
  * @returns {PopupMenu.PopupMenuItem|null} The custom menu item or null if disabled
  */
-export function createCustomMenuItem(settings, gettextFunc) {
+export function createCustomMenuItem(settings, gettextFunc, showIcon) {
     if (!settings) {
         return null;
     }
@@ -38,12 +39,13 @@ export function createCustomMenuItem(settings, gettextFunc) {
         return null;
     }
 
-    // Use an image menu item when a valid icon file is configured
+    // Use an image menu item when a valid icon file is configured and the
+    // 'menu-icons' preference gives this entry an icon.
     const iconFile = trimmedIconPath.length > 0
         ? Gio.File.new_for_path(trimmedIconPath)
         : null;
 
-    const menuItem = iconFile?.query_exists(null)
+    const menuItem = showIcon && iconFile?.query_exists(null)
         ? new PopupMenu.PopupImageMenuItem(trimmedLabel, new Gio.FileIcon({ file: iconFile }))
         : new PopupMenu.PopupMenuItem(trimmedLabel);
 

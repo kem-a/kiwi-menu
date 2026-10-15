@@ -16,6 +16,11 @@ import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import * as SystemActions from 'resource:///org/gnome/shell/misc/systemActions.js';
 import * as Util from 'resource:///org/gnome/shell/misc/util.js';
 import { ForceQuitService } from './forceQuitService.js';
+import {
+  normalizeMenuIconsMode,
+  shouldShowCustomEntryIcon,
+  shouldShowEntryIcon,
+} from './menuIcons.js';
 import { RecentItemsSubmenu } from './recentItemsSubmenu.js';
 import { createCustomMenuItem, runCustomMenuCommand } from './customMenuItem.js';
 
@@ -136,6 +141,11 @@ export const KiwiMenu = GObject.registerClass(
       );
       this._settingsSignalIds.push(
         this._settings.connect('changed::custom-menu-shortcut', () =>
+          this._renderPopupMenu().catch(logError)
+        )
+      );
+      this._settingsSignalIds.push(
+        this._settings.connect('changed::menu-icons', () =>
           this._renderPopupMenu().catch(logError)
         )
       );
@@ -284,16 +294,29 @@ export const KiwiMenu = GObject.registerClass(
       const layout = await this._generateLayout();
       if (this._isDestroyed) return;
 
+      // Which entries show an icon, set in preferences.
+      const iconsMode = normalizeMenuIconsMode(this._settings.get_string('menu-icons'));
+
       let customMenuAdded = false;
 
       layout.forEach((item) => {
         switch (item.type) {
           case 'menu':
-            this._makeMenu(item.title, item.cmds, item.icon, item.accel);
+            this._makeMenu(
+              item.title,
+              item.cmds,
+              item.icon,
+              item.accel,
+              shouldShowEntryIcon(item, iconsMode)
+            );
             
             // Add custom menu item right after App Store entry
             if (!customMenuAdded && item.commandSettingKey === 'app-store-command') {
-              const customItem = createCustomMenuItem(this._settings, this._gettext.bind(this));
+              const customItem = createCustomMenuItem(
+                this._settings,
+                this._gettext.bind(this),
+                shouldShowCustomEntryIcon(iconsMode)
+              );
               if (customItem) {
                 const bindings = this._settings.get_strv('custom-menu-shortcut');
                 if (bindings.length > 0) {
@@ -305,7 +328,11 @@ export const KiwiMenu = GObject.registerClass(
             }
             break;
           case 'recent-items':
-            this._makeRecentItemsMenu(item.title, item.icon);
+            this._makeRecentItemsMenu(
+              item.title,
+              item.icon,
+              shouldShowEntryIcon(item, iconsMode)
+            );
             break;
           case 'separator':
             this._makeSeparator();
@@ -415,8 +442,11 @@ export const KiwiMenu = GObject.registerClass(
       }
     }
 
-    _makeMenu(title, cmds, iconName, accel) {
-      const menuItem = iconName
+    _makeMenu(title, cmds, iconName, accel, showIcon) {
+      // Whether an entry shows an icon is decided by the caller from the
+      // 'menu-icons' setting; the Recent Items submenu is unaffected because it
+      // builds its own items (see recentItemsSubmenu.js).
+      const menuItem = showIcon && iconName
         ? new PopupMenu.PopupImageMenuItem(title, iconName)
         : new PopupMenu.PopupMenuItem(title);
       const singleCmd = Array.isArray(cmds) && cmds.length === 1 ? cmds[0] : null;
@@ -528,8 +558,11 @@ export const KiwiMenu = GObject.registerClass(
         .replace(/\+/g, ' ');
     }
 
-    _makeRecentItemsMenu(title, iconName) {
-      const submenuItem = new RecentItemsSubmenu(title, this.menu, this._recentMenuManager, this._extension, iconName);
+    _makeRecentItemsMenu(title, iconName, showIcon) {
+      // Only the "Recent Items" entry itself follows the 'menu-icons'
+      // preference; the items inside the submenu always keep their icons.
+      const entryIcon = showIcon ? iconName : null;
+      const submenuItem = new RecentItemsSubmenu(title, this.menu, this._recentMenuManager, this._extension, entryIcon);
       this.menu.addMenuItem(submenuItem);
     }
 
