@@ -1,0 +1,372 @@
+# Russian Translation for Kiwi Menu.
+# Copyright (C) 2026 Arnis Kemlers
+# This file is distributed under the same license as the Kiwi Menu package.
+# Andrew_Sor, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kiwimenu\n"
+"Report-Msgid-Bugs-To: https://github.com/kem-a/kiwimenu-kemma/issues\n"
+"POT-Creation-Date: 2026-05-25 00:00+0000\n"
+"PO-Revision-Date: 2026-10-17 12:08+0000\n"
+"Last-Translator: Andrew_Sor\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/kiwimenu.js
+msgid "About This PC"
+msgstr "Об этом Mac"
+
+#: src/kiwimenu.js
+msgid "System Settings..."
+msgstr "Системные настройки"
+
+#: src/kiwimenu.js
+msgid "App Store..."
+msgstr "App Store"
+
+#: src/kiwimenu.js
+msgid "Recent Items"
+msgstr "Недавно использованные объекты"
+
+#: src/kiwimenu.js
+msgid "Force Quit"
+msgstr "Завершить принудительно"
+
+#: src/kiwimenu.js
+msgid "Sleep"
+msgstr "Режим сна"
+
+#: src/kiwimenu.js
+msgid "Restart..."
+msgstr "Перезагрузить"
+
+#: src/kiwimenu.js
+msgid "Shut Down..."
+msgstr "Выключить"
+
+#: src/kiwimenu.js
+msgid "Lock Screen"
+msgstr "Заблокировать экран"
+
+#: src/kiwimenu.js
+msgid "Switch User..."
+msgstr "Сменить пользователя"
+
+#: src/kiwimenu.js
+msgid "Log Out..."
+msgstr "Завершить сеанс"
+
+#: src/kiwimenu.js
+#, javascript-format
+msgid "Log Out %s..."
+msgstr "Завершить сеанс %s"
+
+#: src/recentItemsSubmenu.js
+msgid "No recent items"
+msgstr "Нету недавно использованных объектов"
+
+#: src/recentItemsSubmenu.js
+msgid "Documents"
+msgstr "Документы"
+
+#: src/recentItemsSubmenu.js
+msgid "Folders"
+msgstr "Папки"
+
+#: src/recentItemsSubmenu.js
+msgid "Applications"
+msgstr "Приложения"
+
+#: src/recentItemsSubmenu.js
+msgid "Clear Menu"
+msgstr "Очистить меню"
+
+#: src/userSwitcher.js
+msgid "No eligible user accounts found"
+msgstr "Подходящих учетных записей пользователей не найдено."
+
+#: src/userSwitcher.js
+msgid "Login Window..."
+msgstr "Экран входа"
+
+#: src/userSwitcher.js
+msgid "Users & Groups Settings..."
+msgstr ""
+
+#: app/forceQuitWindow.js
+msgid "Force Quit Applications"
+msgstr "принудительное завершение"
+
+#: app/forceQuitWindow.js
+msgid "If an app doesn't respond for a while, select its name and click Force Quit."
+msgstr "Если приложение некоторое время не отвечает, выберите его название и нажмите «Принудительно завершить»."
+
+#: app/aboutWindow.js
+msgid "Chip"
+msgstr "Процессор"
+
+#: app/aboutWindow.js
+msgid "Memory"
+msgstr "Память"
+
+#: app/aboutWindow.js
+msgid "Serial number"
+msgstr "Серийный номер"
+
+#: app/aboutWindow.js
+msgid "OS"
+msgstr "macOS"
+
+#: app/aboutWindow.js
+msgid "More Info..."
+msgstr "Подробнее..."
+
+#: prefs.js
+msgid "Options"
+msgstr "Опции"
+
+#: prefs.js
+msgid "Menu"
+msgstr "Меню"
+
+#: prefs.js
+msgid "Adjust how the Kiwi Menu looks and behaves."
+msgstr "Настройте внешний вид и поведение меню Kiwi."
+
+#: prefs.js
+msgid "Menu Icon"
+msgstr "Значок меню"
+
+#: prefs.js
+msgid "App Store Command"
+msgstr "Команда App Store"
+
+#: prefs.js
+msgid "Command launched when opening the App Store menu item."
+msgstr "Команда запускается при открытии пункта меню App Store."
+
+#: prefs.js
+msgid "Custom Menu Item"
+msgstr "Свой пункт меню"
+
+#: prefs.js
+msgid "Add a custom menu entry with your own label and command."
+msgstr "Добавьте пользовательский пункт меню со своей собственным названием и командой."
+
+#: prefs.js
+msgid "Menu Label"
+msgstr "Название"
+
+#: prefs.js
+msgid "Command"
+msgstr "Команда"
+
+#: prefs.js
+msgid "Restore Default"
+msgstr "Восстановить по умолчанию"
+
+#: prefs.js
+msgid "Choose the icon to display in the panel."
+msgstr "Выберите значок, который будет отображаться на панели."
+
+#: prefs.js
+msgid "Panel"
+msgstr "Панель"
+
+#: prefs.js
+msgid "Hide or show the Activities button from the top bar."
+msgstr "Скрыть или отобразить кнопку «Действия» на верхней панели."
+
+#: prefs.js
+msgid "Hide Activities Menu"
+msgstr "Скрыть меню «Действия»"
+
+#: prefs.js
+msgid "Display the Activities button in the top panel."
+msgstr "Отображение кнопки «Действия» на верхней панели."
+
+#: prefs.js
+msgid "Quick Settings"
+msgstr "Быстрые настройки"
+
+#: prefs.js
+msgid "Choose which default quick action buttons stay visible."
+msgstr "Выберите, какие кнопки быстрых действий по умолчанию останутся видимыми."
+
+#: prefs.js
+msgid "Hide Lock Screen Button"
+msgstr "Скрыть кнопку блокировки экрана"
+
+#: prefs.js
+msgid "Remove the lock screen quick action button."
+msgstr "Убрать кнопку блокировки экрана"
+
+#: prefs.js
+msgid "Hide Power Button"
+msgstr "Скрыть кнопку питания"
+
+#: prefs.js
+msgid "Remove the power menu quick action button."
+msgstr "Убрать кнопку меню питания"
+
+#: prefs.js
+msgid "Hide Settings Button"
+msgstr "Скрыть кнопку настроек"
+
+#: prefs.js
+msgid "Remove the settings shortcut quick action button."
+msgstr "Убрать ярлык настроек"
+
+#: prefs.js
+msgid "About"
+msgstr "О расширении"
+
+#: prefs.js
+msgid "Website"
+msgstr "GitHub"
+
+#: prefs.js
+msgid "Report an Issue"
+msgstr "Сообщить об ошибке"
+
+#: prefs.js
+msgid "Credits"
+msgstr "Соучастники"
+
+#: prefs.js
+msgid "Legal"
+msgstr "Лицензии"
+
+#: prefs.js
+msgid "License"
+msgstr "Лицензия"
+
+#: prefs.js
+msgid "Kiwi Menu is free and open source software."
+msgstr "Kiwi Menu — это бесплатное программное обеспечение с открытым исходным кодом."
+
+#: prefs.js
+msgid "GNU General Public License v3.0"
+msgstr "GNU General Public License v3.0"
+
+#: prefs.js
+msgid "Copyright"
+msgstr "Авторские права"
+
+#: prefs.js
+msgid "Copyright © 2026 Arnis Kemlers. Licensed under the terms of the GNU General Public License version 3 or later."
+msgstr "© 2026 Arnis Kemlers. Распространяется на условиях лицензии GNU General Public License version 3 или более поздней"
+
+#: prefs.js
+msgid "Become a sponsor on GitHub"
+msgstr "Стать спонсором на GitHubGitHub"
+
+#: prefs.js
+msgid "Sponsor Me ♡"
+msgstr "Поддержать меня ♡"
+
+#: prefs.js
+msgid "Apply Changes"
+msgstr "Применить изменения"
+
+#: prefs.js
+msgid "Change log"
+msgstr "Список изменений"
+
+#: prefs.js
+msgid "Force Quit Shortcut"
+msgstr "Сочетание клавиш принудительного завершения"
+
+#: prefs.js
+msgid "Keyboard shortcut that opens the Force Quit window."
+msgstr "Клавиатурная комбинация, открывающая окно «Принудительное завершение»."
+
+#: prefs.js
+msgid "Clear Shortcut"
+msgstr "Очистить"
+
+#: prefs.js
+msgid "Disabled"
+msgstr "Отключено"
+
+#: prefs.js
+msgid "macOS Style Shortcuts"
+msgstr "macOS стиль сочетаний клавиш"
+
+#: prefs.js
+msgid "Show accelerator hints using macOS symbols (⌘ ⌥ ^ ⎋)."
+msgstr "Отображение подсказок по использованию клавиш быстрого доступа с помощью символов macOS (⌘ ⌥ ^ ⎋)."
+
+#: prefs.js
+msgid "Keyboard Shortcut"
+msgstr "Сочетание клавиш"
+
+#: prefs.js
+msgid "Shortcut that runs the custom command."
+msgstr "Сочетание клавиш, запускающее пользовательскую команду."
+
+#: prefs.js
+msgid "Set Shortcut"
+msgstr "Установить сочетание клавиш"
+
+#: prefs.js
+msgid "Press a Shortcut"
+msgstr "Нажмите сочетание клавиш"
+
+#: prefs.js
+msgid "Esc to cancel · Backspace to disable"
+msgstr "Esc — отменить · Backspace — отключить"
+
+#: prefs.js
+msgid "Optional image shown next to the menu label."
+msgstr "Дополнительное изображение отображается рядом с надписью в меню."
+
+#: prefs.js
+msgid "Icon"
+msgstr "Значок"
+
+#: prefs.js
+msgid "Choose Icon File"
+msgstr "Выберите файл значка"
+
+#: prefs.js
+msgid "Remove Icon"
+msgstr "Удалить значок"
+
+#: prefs.js
+msgid "Selected file was not found."
+msgstr "Выбранный файл не найден"
+
+#: prefs.js
+msgid "Select Custom Menu Icon"
+msgstr "Выберите свой значок меню"
+
+#: prefs.js
+msgid "Images"
+msgstr "Изображения"
+
+#: src/recentItemsSubmenu.js
+msgid "Item unavailable"
+msgstr "Пункт недоступен"
+
+#: src/recentItemsSubmenu.js
+#, javascript-format
+msgid "Could not open \"%s\"."
+msgstr "Невозможно открыть \"%s\"."
+
+#: src/recentItemsSubmenu.js
+msgid "Application unavailable"
+msgstr "Приложение недоступно"
+
+#: src/recentItemsSubmenu.js
+#, javascript-format
+msgid "Could not launch \"%s\"."
+msgstr "Невозможно запустить \"%s\"."
+
+#: app/aboutWindow.js
+msgid "Desktop"
+msgstr "Рабочий стол"
