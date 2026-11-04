@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Kiwi Menu package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # FULL NAME <EMAIL@ADDRESS>, 2026.
-# Dymko <Dymkovych@proton.me>, 2026.
+# Димко <Dymkovych@proton.me>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Kiwi Menu 1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/kem-a/kiwimenu-kemma/issues\n"
 "POT-Creation-Date: 2026-05-25 00:00+0000\n"
-"PO-Revision-Date: 2026-08-06 11:03+0300\n"
-"Last-Translator: Dymko <Dymkovych@proton.me>\n"
+"PO-Revision-Date: 2026-10-27 17:37+0200\n"
+"Last-Translator: Димко <Dymkovych@proton.me>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
@@ -47,7 +47,7 @@ msgstr "Призупинити"
 
 #: src/kiwimenu.js
 msgid "Restart..."
-msgstr "Перезапустити..."
+msgstr "Перезапуск..."
 
 #: src/kiwimenu.js
 msgid "Shut Down..."
@@ -147,7 +147,7 @@ msgstr "Коригуйте вигляд і поведінку Kiwi Menu."
 
 #: prefs.js
 msgid "Menu Icon"
-msgstr "Іконка запускача"
+msgstr "Піктограма запускача"
 
 #: prefs.js
 msgid "App Store Command"
@@ -159,11 +159,15 @@ msgstr "Команда-спонукач, яка запускає Крамниц�
 
 #: prefs.js
 msgid "Menu Item Icons"
-msgstr "Іконки елементів списку"
+msgstr "Піктограми списку"
 
 #: prefs.js
-msgid "Show icons on every entry, on the top three (About This PC, System Settings, App Store) only, or on none."
-msgstr "Показувати іконки на всіх елементах, лише на трьох верхніх (Про цей пристрій, Системні параметри, Крамниця програм) або на жодному."
+msgid ""
+"Show icons on every entry, on the top three (About This PC, System Settings, "
+"App Store) only, or on none."
+msgstr ""
+"Для всіх елементів списку, лише на перших трьох (Про цей пристрій, Системні "
+"параметри, Крамниця програм) або на жодному."
 
 #: prefs.js
 msgid "Default"
@@ -199,7 +203,7 @@ msgstr "Відновити типові"
 
 #: prefs.js
 msgid "Choose the icon to display in the panel."
-msgstr "Виберіть іконку для відображення на панелі."
+msgstr "Виберіть піктограму для відображення на панелі."
 
 #: prefs.js
 msgid "Panel"
@@ -312,15 +316,15 @@ msgstr "Журнал змін"
 
 #: prefs.js
 msgid "Force Quit Shortcut"
-msgstr "Комбінація для примусового завершення"
+msgstr "Вікно примусового завершення"
 
 #: prefs.js
 msgid "Keyboard shortcut that opens the Force Quit window."
-msgstr "Комбінація клавіш, що відкриває вікно примусового завершення."
+msgstr "Клавіатурне скорочення для виклику вікна."
 
 #: prefs.js
 msgid "Clear Shortcut"
-msgstr "Очистити комбінацію"
+msgstr "Скинути скорочення"
 
 #: prefs.js
 msgid "Disabled"
@@ -328,27 +332,27 @@ msgstr "Вимкнено"
 
 #: prefs.js
 msgid "macOS Style Shortcuts"
-msgstr "Комбінації у стилі macOS"
+msgstr "Скорочення на лад macOS"
 
 #: prefs.js
 msgid "Show accelerator hints using macOS symbols (⌘ ⌥ ^ ⎋)."
-msgstr "Показувати підказки комбінацій із символами macOS (⌘ ⌥ ^ ⎋)."
+msgstr "Підказки скорочень символами macOS (⌘ ⌥ ^ ⎋)."
 
 #: prefs.js
 msgid "Keyboard Shortcut"
-msgstr "Комбінація клавіш"
+msgstr "Клавіатурне скорочення"
 
 #: prefs.js
 msgid "Shortcut that runs the custom command."
-msgstr "Комбінація, що запускає власну команду."
+msgstr "Скорочення, яке викликає власну команду."
 
 #: prefs.js
 msgid "Set Shortcut"
-msgstr "Задати комбінацію"
+msgstr "Встановити скорочення"
 
 #: prefs.js
 msgid "Press a Shortcut"
-msgstr "Натисніть комбінацію клавіш"
+msgstr "Уведіть нове сполучення"
 
 #: prefs.js
 msgid "Esc to cancel · Backspace to disable"
@@ -360,15 +364,15 @@ msgstr "Необов'язкове зображення поруч із назв�
 
 #: prefs.js
 msgid "Icon"
-msgstr "Іконка"
+msgstr "Піктограма"
 
 #: prefs.js
 msgid "Choose Icon File"
-msgstr "Вибрати файл іконки"
+msgstr "Вибрати файл піктограми"
 
 #: prefs.js
 msgid "Remove Icon"
-msgstr "Вилучити іконку"
+msgstr "Вилучити піктограму"
 
 #: prefs.js
 msgid "Selected file was not found."
@@ -376,7 +380,7 @@ msgstr "Вибраний файл не знайдено."
 
 #: prefs.js
 msgid "Select Custom Menu Icon"
-msgstr "Вибір іконки власного елемента списку"
+msgstr "Вибір піктограми"
 
 #: prefs.js
 msgid "Images"
