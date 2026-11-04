@@ -23,6 +23,13 @@ const DEFAULT_BUTTON_ICON = 'system-users-symbolic';
 const AVATAR_ICON_SIZE = 64;
 const MINIMUM_VISIBLE_UID = 1000;
 
+// Newer Shell versions replaced St.BoxLayout's vertical property with orientation.
+function boxLayoutOrientation(orientation) {
+  return 'orientation' in St.BoxLayout.prototype
+    ? { orientation }
+    : { vertical: orientation === Clutter.Orientation.VERTICAL };
+}
+
 /**
  * Count real user accounts (UID >= 1000, non-system accounts).
  */
@@ -251,7 +258,7 @@ export const UserSwitcherButton = GObject.registerClass(
         const gridSection = new PopupMenu.PopupMenuSection();
         
         const gridContainer = new St.BoxLayout({
-          vertical: true,
+          ...boxLayoutOrientation(Clutter.Orientation.VERTICAL),
           style_class: 'kiwi-user-grid',
           x_expand: true,
         });
@@ -260,7 +267,7 @@ export const UserSwitcherButton = GObject.registerClass(
         users.forEach((user, index) => {
           if (index % 3 === 0) {
             currentRow = new St.BoxLayout({
-              vertical: false,
+              ...boxLayoutOrientation(Clutter.Orientation.HORIZONTAL),
               x_expand: true,
             });
             gridContainer.add_child(currentRow);
@@ -493,7 +500,7 @@ export const UserSwitcherButton = GObject.registerClass(
       }
 
       const content = new St.BoxLayout({
-        vertical: true,
+        ...boxLayoutOrientation(Clutter.Orientation.VERTICAL),
         style_class: 'kiwi-user-item-content',
         x_align: Clutter.ActorAlign.CENTER,
       });
