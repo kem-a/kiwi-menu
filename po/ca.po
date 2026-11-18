@@ -1,0 +1,300 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kiwimenu\n"
+"Report-Msgid-Bugs-To: https://github.com/kem-a/kiwimenu-kemma/issues\n"
+"PO-Revision-Date: 2025-10-27 12:00+0000\n"
+"Last-Translator: Pau Tavira Raposo\n"
+"Language-Team: Catalan\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "About"
+msgstr "Quant a"
+
+msgid "About This PC"
+msgstr "Quant a aquest ordinador"
+
+msgid "Add a custom menu entry with your own label and command."
+msgstr ""
+"Afegeix una entrada de menú personalitzada amb la teva pròpia etiqueta i"
+"comanda."
+
+msgid "Adjust how the Kiwi Menu looks and behaves."
+msgstr "Ajusta com es veu i es comporta el menú Kiwi."
+
+msgid "App Store Command"
+msgstr "Comanda de la botiga de programari"
+
+msgid "App Store..."
+msgstr "Botiga de programari..."
+
+msgid "Application unavailable"
+msgstr "Aplicació no disponible"
+
+msgid "Applications"
+msgstr "Aplicacions"
+
+msgid "Apply Changes"
+msgstr "Aplicar canvis"
+
+msgid "Become a sponsor on GitHub"
+msgstr "Converteix-te en patrocinador a GitHub"
+
+msgid "Change log"
+msgstr "Registre de canvis"
+
+msgid "Chip"
+msgstr "Xip"
+
+msgid "Choose Icon File"
+msgstr "Escollir fitxer d'icona"
+
+msgid "Choose the icon to display in the panel."
+msgstr "Escull l'icona per mostrar al panell."
+
+msgid "Choose which default quick action buttons stay visible."
+msgstr "Escull quines accions ràpides predeterminades romanen visibles."
+
+msgid "Clear Menu"
+msgstr "Netejar menú"
+
+msgid "Clear Shortcut"
+msgstr "Borrar drecera"
+
+msgid "Command"
+msgstr "Comanda"
+
+msgid "Command launched when opening the App Store menu item."
+msgstr "Comanda executada a l'obrir l'element del menú Botiga de programari."
+
+msgid "Copyright"
+msgstr "Drets d'autor"
+
+msgid ""
+"Copyright © 2026 Arnis Kemlers. Licensed under the terms of the GNU General "
+"Public License version 3 or later."
+msgstr ""
+"Copyright © 2026 Arnis Kemlers. Llicenciat sota els termes de la Llicència"
+"Pública General de GNU versió 3 o posterior."
+
+msgid "Could not launch \"%s\"."
+msgstr "No s'ha pogut iniciar «%s»."
+
+msgid "Could not open \"%s\"."
+msgstr "No s'ha pogut obrir «%s»."
+
+msgid "Credits"
+msgstr "Crèdits"
+
+msgid "Custom Menu Item"
+msgstr "Element de menú personalitzat"
+
+msgid "Default"
+msgstr "Per defecte"
+
+msgid "Desktop"
+msgstr "Escriptori"
+
+msgid "Disabled"
+msgstr "Desactivat"
+
+msgid "Display the Activities button in the top panel."
+msgstr "Mostrar el botó Activitats al panell superior."
+
+msgid "Documents"
+msgstr "Documents"
+
+msgid "Esc to cancel · Backspace to disable"
+msgstr "Esc per cancel·lar · Retorn per desactivar"
+
+msgid "Folders"
+msgstr "Carpetes"
+
+msgid "Force Quit"
+msgstr "Forçar sortida"
+
+msgid "Force Quit Applications"
+msgstr "Forçar sortida d'aplicacions"
+
+msgid "Force Quit Shortcut"
+msgstr "Drecera per forçar sortida"
+
+msgid "GNU General Public License v3.0"
+msgstr "Llicència Pública General de GNU v3.0"
+
+msgid "Hide Activities Menu"
+msgstr "Amagar menú de Activitats"
+
+msgid "Hide Lock Screen Button"
+msgstr "Amagar botó de bloquejar pantalla"
+
+msgid "Hide Power Button"
+msgstr "Amagar botó d'energia"
+
+msgid "Hide Settings Button"
+msgstr "Amagar botó de paràmetres"
+
+msgid "Hide or show the Activities button from the top bar."
+msgstr "Amagar o mostrar el botó Activitats a la barra superior."
+
+msgid "Icon"
+msgstr "Icona"
+
+msgid ""
+"If an app doesn't respond for a while, select its name and click Force Quit."
+msgstr ""
+"Si una aplicació no respon durant un temps, selecciona el seu nom i fes clic"
+"a Forçar sortida."
+
+msgid "Images"
+msgstr "Imatges"
+
+msgid "Item unavailable"
+msgstr "Element no disponible"
+
+msgid "Keyboard Shortcut"
+msgstr "Drecera de teclat"
+
+msgid "Keyboard shortcut that opens the Force Quit window."
+msgstr "Drecera de teclat que obre la finestra Forçar sortida."
+
+msgid "Kiwi Menu is free and open source software."
+msgstr "Kiwi Menu és software lliure i de codi obert."
+
+msgid "Legal"
+msgstr "Legal"
+
+msgid "License"
+msgstr "Llicència"
+
+msgid "Lock Screen"
+msgstr "Bloquejar pantalla"
+
+msgid "Log Out %s..."
+msgstr "Tancar sessió de %s..."
+
+msgid "Log Out..."
+msgstr "Tancar sessió..."
+
+msgid "Login Window..."
+msgstr "Finestra d'inici de sessió..."
+
+msgid "Memory"
+msgstr "Memòria"
+
+msgid "Menu"
+msgstr "Menú"
+
+msgid "Menu Icon"
+msgstr "Icona del menú"
+
+msgid "Menu Item Icons"
+msgstr "Icones dels elements del menú"
+
+msgid "Menu Label"
+msgstr "Etiqueta del menú"
+
+msgid "More Info..."
+msgstr "Més informació..."
+
+msgid "No eligible user accounts found"
+msgstr "No s'han trobat comptes d'usuari elegibles"
+
+msgid "No recent items"
+msgstr "No hi ha elements recents"
+
+msgid "None"
+msgstr "Cap"
+
+msgid "OS"
+msgstr "SO"
+
+msgid "Optional image shown next to the menu label."
+msgstr "Imatge opcional que es mostra juntament amb l'etiqueta del menú."
+
+msgid "Options"
+msgstr "Opcions"
+
+msgid "Panel"
+msgstr "Panell"
+
+msgid "Press a Shortcut"
+msgstr "Prem una drecera"
+
+msgid "Quick Settings"
+msgstr "Ajustaments ràpids"
+
+msgid "Recent Items"
+msgstr "Elements recents"
+
+msgid "Remove Icon"
+msgstr "Treure icona"
+
+msgid "Remove the lock screen quick action button."
+msgstr "Treu l'acció ràpida de bloquejar pantalla."
+
+msgid "Remove the power menu quick action button."
+msgstr "Treu l'acció ràpida del menú d'energia."
+
+msgid "Remove the settings shortcut quick action button."
+msgstr "Treu l'acció ràpida de l'accés a paràmetres."
+
+msgid "Report an Issue"
+msgstr "Reportar un problema"
+
+msgid "Restart..."
+msgstr "Reiniciar..."
+
+msgid "Restore Default"
+msgstr "Restaurar per defecte"
+
+msgid "Select Custom Menu Icon"
+msgstr "Seleccionar icona de l'element de menú personalitzat"
+
+msgid "Selected file was not found."
+msgstr "No s'ha trobat el fitxer seleccionat."
+
+msgid "Set Shortcut"
+msgstr "Establir drecera"
+
+msgid "Shortcut that runs the custom command."
+msgstr "Drecera que executa la comanda predeterminada."
+
+msgid "Show accelerator hints using macOS symbols (⌘ ⌥ ^ ⎋)."
+msgstr "Mostra les indicacions de drecera amb símbols de macOS (⌘ ⌥ ^ ⎋)."
+
+msgid ""
+"Show icons on every entry, on the top three (About This PC, System Settings, "
+"App Store) only, or on none."
+msgstr ""
+"Mostrar icones a totes les entrades, només a les tres primeres (Quant a "
+"aquest equip, Paràmetres del sistema, Botiga de programari) o a cap."
+
+msgid "Shut Down..."
+msgstr "Apagar..."
+
+msgid "Sleep"
+msgstr "Suspendre"
+
+msgid "Sponsor Me ♡"
+msgstr "Patrocina'm ♡"
+
+msgid "Switch User..."
+msgstr "Canviar d'usuari..."
+
+msgid "System Settings..."
+msgstr "Paràmetres del sistema..."
+
+msgid "Three"
+msgstr "Tres"
+
+msgid "Users & Groups Settings..."
+msgstr "Paràmetres d'usuaris i grups..."
+
+msgid "Website"
+msgstr "Lloc web"
+
+msgid "macOS Style Shortcuts"
+msgstr "Dreceres a l'estil de macOS"
