@@ -1,7 +1,7 @@
 <!-- Row 1: install & reach -->
 [![Install on GNOME Extensions](https://img.shields.io/badge/Install_on-GNOME_Extensions-blue?logo=gnome)](https://extensions.gnome.org/extension/8697/kiwi-menu/)
 [![EGO downloads](https://img.shields.io/gnome-extensions/dt/kiwimenu@kemma?label=EGO%20downloads)](https://extensions.gnome.org/extension/8697/kiwi-menu/)
-![Shell 45–49](https://img.shields.io/badge/GNOME_Shell-45–50-informational?logo=gnome)
+![Shell 45–51](https://img.shields.io/badge/GNOME_Shell-45–51-informational?logo=gnome)
 [![License](https://img.shields.io/github/license/kem-a/kiwi-menu)](https://github.com/kem-a/kiwi-menu/blob/main/LICENSE)
 [![Latest release](https://img.shields.io/github/v/release/kem-a/kiwi-menu?semver)](https://github.com/kem-a/kiwi-menu/releases/latest)
 [![Stars](https://img.shields.io/github/stars/kem-a/kiwi-menu?style=social)](https://github.com/kem-a/kiwi-menu/stargazers)
